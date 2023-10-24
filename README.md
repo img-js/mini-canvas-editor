@@ -2,7 +2,7 @@
 
 # Mini Canvas Editor
 
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fb4rtaz%2Fmini-canvas-editor%2Fbadge%3Fref%3Dmain&style=flat-square)](https://actions-badge.atrox.dev/b4rtaz/mini-canvas-editor/goto?ref=main) [![View this project on NPM](https://img.shields.io/npm/v/mini-canvas-editor.svg?style=flat-square)](https://npmjs.org/package/mini-canvas-editor)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fimg-js%2Fmini-canvas-editor%2Fbadge%3Fref%3Dmain&style=flat-square)](https://actions-badge.atrox.dev/img-js/mini-canvas-editor/goto?ref=main) [![View this project on NPM](https://img.shields.io/npm/v/mini-canvas-editor.svg?style=flat-square)](https://npmjs.org/package/mini-canvas-editor)
 
 Canvas editor component for JavaScript application. Works with any front-end framework. Easy to integrate and use. Well-known graphical interface. Edit images, draw shapes, add texts and more. Gzipped size less than 100 KB. Uses Fabric.js internally.
 
@@ -15,9 +15,9 @@ Main use cases:
 
 Online Examples:
 
-* [🎬 Template Creator](https://b4rtaz.github.io/mini-canvas-editor/webpack-app/public/template-creator.html)
-* [🎨 Inpainting Mask](https://b4rtaz.github.io/mini-canvas-editor/webpack-app/public/inpainting-mask.html)
-* [📦 Vanilla JavaScript](https://b4rtaz.github.io/mini-canvas-editor/webpack-app/public/vanilla-javascript.html)
+* [🎬 Template Creator](https://img-js.github.io/mini-canvas-editor/webpack-app/public/template-creator.html)
+* [🎨 Inpainting Mask](https://img-js.github.io/mini-canvas-editor/webpack-app/public/inpainting-mask.html)
+* [📦 Vanilla JavaScript](https://img-js.github.io/mini-canvas-editor/webpack-app/public/vanilla-javascript.html)
 
 ## 🚀 Installation
 
@@ -54,8 +54,8 @@ Add the below code to your head section in HTML document.
 ```html
 <head>
 ...
-<link href="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.0.9/css/editor.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.0.9/dist/index.umd.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.0.10/css/editor.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.0.10/dist/index.umd.js"></script>
 ```
 
 Create the editor by:
