@@ -21,11 +21,11 @@ importers:
         specifier: 6.0.0-beta13
         version: 6.0.0-beta13
       mini-canvas-core:
-        specifier: ^0.0.7
-        version: 0.0.7
+        specifier: ^0.0.8
+        version: 0.0.8
       mini-canvas-editor:
-        specifier: ^0.0.7
-        version: 0.0.7(mini-canvas-core@0.0.7)
+        specifier: ^0.0.8
+        version: 0.0.8(mini-canvas-core@0.0.8)
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^2.1.0
@@ -55,11 +55,11 @@ importers:
   demos/webpack-app:
     dependencies:
       mini-canvas-core:
-        specifier: ^0.0.7
-        version: 0.0.7
+        specifier: ^0.0.8
+        version: 0.0.8
       mini-canvas-editor:
-        specifier: ^0.0.7
-        version: 0.0.7(mini-canvas-core@0.0.7)
+        specifier: ^0.0.8
+        version: 0.0.8(mini-canvas-core@0.0.8)
     devDependencies:
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.7.5
@@ -1578,6 +1578,19 @@ packages:
       - utf-8-validate
     dev: false
 
+  /fabric@6.0.0-beta14:
+    resolution: {integrity: sha512-nAOjUNdhiwlXCNAknPlK/Vfni2rElf8WzUZR+RrGWUnWcJL63d+6f7jbWpWNDpDZkA42ZsEVKoI063N/Rc7Tuw==}
+    engines: {node: '>=16.20.0'}
+    optionalDependencies:
+      canvas: 2.11.2
+      jsdom: 20.0.3(canvas@2.11.2)
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
+    dev: false
+
   /fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
     dev: true
@@ -2210,10 +2223,10 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /mini-canvas-core@0.0.7:
-    resolution: {integrity: sha512-3GcyB2xki7YZEIBgFCwJdzG/sMcJ7BBrnKSNClXPCXQEuvw5dtMI4g5JOwe5MErMhX7IlZRrwP1psatQhxUQxA==}
+  /mini-canvas-core@0.0.8:
+    resolution: {integrity: sha512-jjQ7l/6utrgMJgOS2Bi6B3dV5zfScxeNDh9HUL6p0KKxPurg1n4eFEF6GVim8KD2B6Z+Gt7GZWuPXfkwyTXP3w==}
     dependencies:
-      fabric: 6.0.0-beta13
+      fabric: 6.0.0-beta14
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -2221,12 +2234,12 @@ packages:
       - utf-8-validate
     dev: false
 
-  /mini-canvas-editor@0.0.7(mini-canvas-core@0.0.7):
-    resolution: {integrity: sha512-MgRT4UaHKaRIIVOD/pueFKSjnVZPs2ZSIgBG6Q4UL9QBNXjpyLWjeuCYNAwKmAmFfeR6WDY3MfiH4DKotnu3iQ==}
+  /mini-canvas-editor@0.0.8(mini-canvas-core@0.0.8):
+    resolution: {integrity: sha512-ipac7avg3nEU+GCPgzT3pSn5/fQCDV2V6F+LvcE6ypZOlycluDyTdaAiY7R+x+m4dit/Z4mAWk9Tl+iCcjyxNg==}
     peerDependencies:
-      mini-canvas-core: ^0.0.7
+      mini-canvas-core: ^0.0.8
     dependencies:
-      mini-canvas-core: 0.0.7
+      mini-canvas-core: 0.0.8
     dev: false
 
   /minimatch@3.1.2:
