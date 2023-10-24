@@ -21,11 +21,11 @@ importers:
         specifier: 6.0.0-beta13
         version: 6.0.0-beta13
       mini-canvas-core:
-        specifier: ^0.0.9
-        version: 0.0.9
+        specifier: ^0.0.10
+        version: 0.0.10
       mini-canvas-editor:
-        specifier: ^0.0.9
-        version: 0.0.9(mini-canvas-core@0.0.9)
+        specifier: ^0.0.10
+        version: 0.0.10(mini-canvas-core@0.0.10)
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^2.1.0
@@ -55,11 +55,11 @@ importers:
   demos/webpack-app:
     dependencies:
       mini-canvas-core:
-        specifier: ^0.0.9
-        version: 0.0.9
+        specifier: ^0.0.10
+        version: 0.0.10
       mini-canvas-editor:
-        specifier: ^0.0.9
-        version: 0.0.9(mini-canvas-core@0.0.9)
+        specifier: ^0.0.10
+        version: 0.0.10(mini-canvas-core@0.0.10)
     devDependencies:
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.7.5
@@ -2223,8 +2223,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /mini-canvas-core@0.0.9:
-    resolution: {integrity: sha512-34lDsoS1QjAoLCh2szEyolvZDDH+eV7DvBlgAO59IT9R24FcFxsybjIdwAPMDZ+9CEm/D1qUj2xqcIjxNFr2Gw==}
+  /mini-canvas-core@0.0.10:
+    resolution: {integrity: sha512-MEH2BzFIQnHWavheTCXEpbjgEk1Yfbqg9oiCQriPR8RP4VfvjlZldc21NPDhXPM8RvBeZrGeJOTKsKadQtY+sw==}
     dependencies:
       fabric: 6.0.0-beta14
     transitivePeerDependencies:
@@ -2234,12 +2234,12 @@ packages:
       - utf-8-validate
     dev: false
 
-  /mini-canvas-editor@0.0.9(mini-canvas-core@0.0.9):
-    resolution: {integrity: sha512-TwZAq1dBiv8tLaB3GWOSPHgwnLI4VnLoxu3jJs3xlJyJHgFofeJDp1Wrh4AM/5TWRFVAMdlgLDZjrr6x66bFTQ==}
+  /mini-canvas-editor@0.0.10(mini-canvas-core@0.0.10):
+    resolution: {integrity: sha512-G3F97WJd7mFA+42nzb96fHARO5pxn79BP4+IAkEfXSG7PVwPfeKJWsAZeFf6qR7CnkzZ0WUEzVXh8tOAOEtAlA==}
     peerDependencies:
-      mini-canvas-core: ^0.0.9
+      mini-canvas-core: ^0.0.10
     dependencies:
-      mini-canvas-core: 0.0.9
+      mini-canvas-core: 0.0.10
     dev: false
 
   /minimatch@3.1.2:
