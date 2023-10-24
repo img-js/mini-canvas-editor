@@ -1,0 +1,19 @@
+@import 'mini-canvas-editor/css/editor.css';
+
+body {
+	font:
+		14px/1.4em Arial,
+		Verdana,
+		serif;
+}
+.editor-placeholder {
+	width: 50vw;
+	height: 40vh;
+	margin: 0 auto;
+}
+.output {
+	text-align: center;
+}
+.output-image {
+	border: 1px solid #ccc;
+}

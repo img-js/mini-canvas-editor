@@ -1,0 +1,33 @@
+{
+	"name": "svelte-app-demo",
+	"author": "b4rtaz",
+	"license": "MIT",
+	"private": true,
+	"version": "1.0.0",
+	"scripts": {
+		"start": "svelte-kit sync && vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"prettier": "prettier --check ./src",
+		"prettier:fix": "prettier --write ./src"
+	},
+	"dependencies": {
+		"mini-canvas-editor": "^0.0.7",
+		"mini-canvas-core": "^0.0.7",
+		"fabric": "6.0.0-beta13",
+		"canvas": "^2.11.2"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^2.1.0",
+		"@sveltejs/kit": "^1.26.0",
+		"svelte": "^4.0.5",
+		"svelte-check": "^3.4.3",
+		"tslib": "^2.4.1",
+		"typescript": "^5.2.2",
+		"vite": "^4.4.2",
+		"prettier": "^3.0.3"
+	},
+	"type": "module"
+}

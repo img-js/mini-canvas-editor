@@ -1,0 +1,32 @@
+{
+	"name": "webpack-app-demo",
+	"author": "b4rtaz",
+	"license": "MIT",
+	"private": true,
+	"version": "1.0.0",
+	"scripts": {
+		"clean": "rm -rf public/build",
+		"start": "webpack --mode development --watch",
+		"build": "pnpm clean && webpack --mode production",
+		"eslint": "eslint ./src --ext .ts",
+		"test:single": "echo \"No tests yet\"",
+		"prettier": "prettier --check ./src",
+		"prettier:fix": "prettier --write ./src"
+	},
+	"dependencies": {
+		"mini-canvas-editor": "^0.0.7",
+		"mini-canvas-core": "^0.0.7"
+	},
+	"devDependencies": {
+		"ts-loader": "^9.4.2",
+		"style-loader": "^3.3.1",
+		"css-loader": "^6.7.3",
+		"typescript": "^5.2.2",
+		"webpack": "^5.89.0",
+		"webpack-cli": "^5.1.4",
+		"prettier": "^2.8.7",
+		"@typescript-eslint/eslint-plugin": "^6.7.5",
+		"@typescript-eslint/parser": "^6.7.5",
+		"eslint": "^8.51.0"
+	}
+}

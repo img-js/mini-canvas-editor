@@ -1,0 +1,46 @@
+name: examples
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Build
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+      - name: Install
+        run: pnpm install
+      - name: Build
+        run: pnpm build
+      - name: Append Analytics
+        run: |
+            node scripts/append-ga.cjs demos/webpack-app/public
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: demos
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v1

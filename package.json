@@ -1,0 +1,14 @@
+{
+	"private": true,
+	"scripts": {
+		"build": "pnpm run -r build",
+		"prettier": "pnpm run -r prettier",
+		"prettier:fix": "pnpm run -r prettier:fix",
+		"eslint": "pnpm run -r eslint",
+		"test:single": "pnpm run -r test:single",
+		"serve": "http-server -c-1 -p 4333 ./"
+	},
+	"devDependencies": {
+		"http-server": "^14.1.1"
+	}
+}
