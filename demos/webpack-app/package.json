@@ -14,8 +14,8 @@
 		"prettier:fix": "prettier --write ./src"
 	},
 	"dependencies": {
-		"mini-canvas-editor": "^0.0.7",
-		"mini-canvas-core": "^0.0.7"
+		"mini-canvas-editor": "^0.0.8",
+		"mini-canvas-core": "^0.0.8"
 	},
 	"devDependencies": {
 		"ts-loader": "^9.4.2",
