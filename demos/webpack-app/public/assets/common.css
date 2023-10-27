@@ -1,0 +1,38 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font: 14px/1.5em Arial, Verdana, sans-serif;
+}
+
+.header {
+	position: relative;
+	z-index: 1000;
+	display: flex;
+	width: 100%;
+	background: #474747;
+	color: #fff;
+}
+.header.bb {
+	border-bottom: 4px solid #252525;
+}
+.header-title {
+	flex: 1;
+	padding: 10px;
+}
+.header-title h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-weight: normal;
+}
+.header-links {
+	padding: 10px;
+}
+.header-links a {
+	color: #fff;
+	text-decoration: underline;
+}
+.header-links a:hover {
+	text-decoration: none;
+}

@@ -17,6 +17,7 @@ Online Examples:
 
 * [🎬 Template Creator](https://img-js.github.io/mini-canvas-editor/webpack-app/public/template-creator.html)
 * [🎨 Inpainting Mask](https://img-js.github.io/mini-canvas-editor/webpack-app/public/inpainting-mask.html)
+* [🔲 Crop](https://img-js.github.io/mini-canvas-editor/webpack-app/public/crop.html)
 * [📦 Vanilla JavaScript](https://img-js.github.io/mini-canvas-editor/webpack-app/public/vanilla-javascript.html)
 
 ## 🚀 Installation
@@ -54,8 +55,8 @@ Add the below code to your head section in HTML document.
 ```html
 <head>
 ...
-<link href="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.0.10/css/editor.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.0.10/dist/index.umd.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.1.0/css/editor.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.1.0/dist/index.umd.js"></script>
 ```
 
 Create the editor by:

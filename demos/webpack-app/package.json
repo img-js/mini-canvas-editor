@@ -10,12 +10,12 @@
 		"build": "pnpm clean && webpack --mode production",
 		"eslint": "eslint ./src --ext .ts",
 		"test:single": "echo \"No tests yet\"",
-		"prettier": "prettier --check ./src",
-		"prettier:fix": "prettier --write ./src"
+		"prettier": "prettier --check ./src ./public/**/*.html ./public/**/*.css",
+		"prettier:fix": "prettier --write ./src ./public/**/*.html ./public/**/*.css"
 	},
 	"dependencies": {
-		"mini-canvas-editor": "^0.0.10",
-		"mini-canvas-core": "^0.0.10"
+		"mini-canvas-editor": "^0.1.0",
+		"mini-canvas-core": "^0.1.0"
 	},
 	"devDependencies": {
 		"ts-loader": "^9.4.2",

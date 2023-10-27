@@ -17,18 +17,25 @@ export class App {
 		const previewImage = document.getElementById('previewImage') as HTMLImageElement;
 		const previewMaskImage = document.getElementById('previewMaskImage') as HTMLImageElement;
 
-		const editor = Editor.createFromImage(placeholder, image, false, {
-			initialMode: EditorMode.brush,
-			brush: {
-				brushColor: '#ff0000',
-				brushSize: 20
+		const editor = Editor.createFromImage(
+			placeholder,
+			image,
+			{
+				selectable: false
 			},
-			rect: {
-				fillColor: '#ff0000'
-			},
-			image: false,
-			textbox: false
-		});
+			{
+				initialMode: EditorMode.brush,
+				brush: {
+					brushColor: '#ff0000',
+					brushSize: 20
+				},
+				rect: {
+					fillColor: '#ff0000'
+				},
+				image: false,
+				textbox: false
+			}
+		);
 		const app = new App(editor, previewImage, previewMaskImage);
 		editor.onChanged.subscribe(app.reloadPreview);
 		app.reloadPreview();

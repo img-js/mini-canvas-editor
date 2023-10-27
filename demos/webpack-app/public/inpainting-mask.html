@@ -5,20 +5,16 @@
 		<title>🎨 Inpainting Mask Example - Mini Canvas Editor</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 		<link rel="icon" href="./assets/favicon.ico" />
+		<link href="./assets/common.css" rel="stylesheet" />
 		<style>
-			html,
 			body {
-				margin: 0;
-				padding: 0;
-				font: 14px/1.5em Arial, Verdana, sans-serif;
-				min-height: 100%;
 				background: url('./assets/background-pattern.svg');
 			}
 			#placeholder {
 				width: 100%;
 				height: 50vh;
 			}
-			p, .debug {
+			.debug {
 				text-align: center;
 				margin: 0;
 				padding: 10px 0;
@@ -33,15 +29,20 @@
 		<script src="./builds/inpainting-mask.js" defer></script>
 	</head>
 	<body>
+		<header class="header bb">
+			<div class="header-title">
+				<h1>🎨 Inpainting Mask Example</h1>
+			</div>
+			<div class="header-links">
+				<a href="https://github.com/img-js/mini-canvas-editor" target="_blank">Mini Canvas Editor</a>
+			</div>
+		</header>
+
 		<div id="placeholder"></div>
 
 		<div class="debug">
 			<img id="previewImage" class="preview-image" />
 			<img id="previewMaskImage" class="preview-image" />
 		</div>
-
-		<p>
-			<a href="https://github.com/img-js/mini-canvas-editor">Mini Canvas Editor</a>
-		</p>
 	</body>
 </html>

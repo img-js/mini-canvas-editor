@@ -28,6 +28,7 @@ function bundle(name) {
 }
 
 module.exports = [
-	bundle('template-creator'),
+	bundle('crop'),
 	bundle('inpainting-mask'),
+	bundle('template-creator'),
 ];

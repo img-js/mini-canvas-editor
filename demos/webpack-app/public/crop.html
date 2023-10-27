@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>🔲 Crop Example - Mini Canvas Editor</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<link rel="icon" href="./assets/favicon.ico" />
+		<link href="./assets/common.css" rel="stylesheet" />
+		<style>
+			body {
+				background: url('./assets/background-pattern.svg');
+			}
+			p {
+				text-align: center;
+				margin: 0;
+				padding: 10px 0;
+			}
+			#editor-placeholder {
+				margin: 0 auto;
+				width: 50vw;
+				height: 50vh;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			}
+			@media only screen and (max-width: 600px) {
+				#editor-placeholder {
+					width: 100%;
+				}
+			}
+			#save-button {
+				border: 0;
+				padding: 10px 20px;
+				color: #fff;
+				background: navy;
+				cursor: pointer;
+				border-radius: 5px;
+			}
+			#save-button:hover {
+				opacity: 0.8;
+			}
+			a {
+				color: navy;
+			}
+			a:hover {
+				text-decoration: none;
+			}
+		</style>
+		<script src="./builds/crop.js" defer></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-title">
+				<h1>🔲 Crop Example</h1>
+			</div>
+			<div class="header-links">
+				<a href="https://github.com/img-js/mini-canvas-editor" target="_blank">Mini Canvas Editor</a>
+			</div>
+		</header>
+
+		<div id="editor-placeholder"></div>
+		<p>
+			<button id="save-button">💾 Save cropped image</button>
+		</p>
+	</body>
+</html>

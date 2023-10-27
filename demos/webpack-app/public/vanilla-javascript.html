@@ -5,13 +5,9 @@
 		<title>📦 Vanilla JavaScript Example - Mini Canvas Editor</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 		<link rel="icon" href="./assets/favicon.ico" />
+		<link href="./assets/common.css" rel="stylesheet" />
 		<style>
-			html,
 			body {
-				margin: 0;
-				padding: 0;
-				font: 14px/1.5em Arial, Verdana, sans-serif;
-				min-height: 100%;
 				background: url('./assets/background-pattern.svg');
 			}
 			#placeholder {
@@ -25,28 +21,39 @@
 		</style>
 	</head>
 	<body>
+		<header class="header bb">
+			<div class="header-title">
+				<h1>📦 Vanilla JavaScript Example</h1>
+			</div>
+			<div class="header-links">
+				<a href="https://github.com/img-js/mini-canvas-editor" target="_blank">Mini Canvas Editor</a>
+			</div>
+		</header>
+
 		<div id="placeholder"></div>
 
 		<p>
 			<button id="saveButton">Save bitmap</button>
 		</p>
-		<p>
-			<a href="https://github.com/img-js/mini-canvas-editor">Mini Canvas Editor</a>
-		</p>
+		<p>This example uses vanilla JavaScript!</p>
 
-		<link href="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.0.10/css/editor.css" rel="stylesheet">
-		<script src="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.0.10/dist/index.umd.js"></script>
+		<link href="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.1.0/css/editor.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.1.0/dist/index.umd.js"></script>
 		<script>
 			const placeholder = document.getElementById('placeholder');
 			const saveButton = document.getElementById('saveButton');
 			const editor = miniCanvasEditor.Editor.createBlank(placeholder, 200, 300, {});
 
-			saveButton.addEventListener('click', () => {
-				const a = document.createElement('a');
-				a.download = 'filename.png';
-				a.href = editor.render().toDataURL('image/png');
-				a.click();
-			}, false);
+			saveButton.addEventListener(
+				'click',
+				() => {
+					const a = document.createElement('a');
+					a.download = 'filename.png';
+					a.href = editor.render().toDataURL('image/png');
+					a.click();
+				},
+				false
+			);
 		</script>
 	</body>
 </html>
