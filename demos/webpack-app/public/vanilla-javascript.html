@@ -37,8 +37,23 @@
 		</p>
 		<p>This example uses vanilla JavaScript!</p>
 
-		<link href="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.1.1/css/editor.css" rel="stylesheet" />
-		<script src="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.1.1/dist/index.umd.js"></script>
+		<script>
+			const isLocalhost = ['localhost', '127.0.0.1'].includes(location.hostname);
+			const cssUrl = isLocalhost
+				? '../../../editor/css/editor.css'
+				: 'https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.2.0/css/editor.css';
+			const coreUrl = isLocalhost
+				? '../../../core/dist/index.umd.js'
+				: 'https://cdn.jsdelivr.net/npm/mini-canvas-core@0.2.0/dist/index.umd.js';
+			const editorUrl = isLocalhost
+				? '../../../editor/dist/index.umd.js'
+				: 'https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.2.0/dist/index.umd.js';
+
+			document.write('<link href="' + cssUrl + '" rel="stylesheet" \/>');
+			document.write('<script src="' + coreUrl + '"><\/script>');
+			document.write('<script src="' + editorUrl + '"><\/script>');
+		</script>
+
 		<script>
 			const placeholder = document.getElementById('placeholder');
 			const saveButton = document.getElementById('saveButton');
