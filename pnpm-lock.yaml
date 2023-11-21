@@ -21,11 +21,11 @@ importers:
         specifier: 6.0.0-beta13
         version: 6.0.0-beta13
       mini-canvas-core:
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.2.0
+        version: 0.2.0
       mini-canvas-editor:
-        specifier: ^0.1.1
-        version: 0.1.1(mini-canvas-core@0.1.1)
+        specifier: ^0.2.0
+        version: 0.2.0(mini-canvas-core@0.2.0)
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^2.1.0
@@ -55,11 +55,11 @@ importers:
   demos/webpack-app:
     dependencies:
       mini-canvas-core:
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.2.0
+        version: 0.2.0
       mini-canvas-editor:
-        specifier: ^0.1.1
-        version: 0.1.1(mini-canvas-core@0.1.1)
+        specifier: ^0.2.0
+        version: 0.2.0(mini-canvas-core@0.2.0)
     devDependencies:
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.7.5
@@ -2223,8 +2223,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /mini-canvas-core@0.1.1:
-    resolution: {integrity: sha512-PbH/IxOz3Hw47u4ijbwR1anfRh9cuwmuY33Sb7o4FpZ+1tiw3PAPWgsa9PKLTF2egc4nYYyRzAdBu9QBltnxlA==}
+  /mini-canvas-core@0.2.0:
+    resolution: {integrity: sha512-YwcwyRQyHS8ZdcL6JhOAIeuwml3thTM/qkIqOr+E+luG3TN3bRF1YUF0JiUiTUhzDEEOMY/2foMfwy6PS2CCTg==}
     dependencies:
       fabric: 6.0.0-beta14
     transitivePeerDependencies:
@@ -2234,12 +2234,12 @@ packages:
       - utf-8-validate
     dev: false
 
-  /mini-canvas-editor@0.1.1(mini-canvas-core@0.1.1):
-    resolution: {integrity: sha512-8yt3jiQsU3RrasmEw5UoGKzlSkZ12MuRs/0pnSaqFIFptAZxWBwfucvC3wmu1u/ERxH2xlLnMEDWqFnjoBEhFg==}
+  /mini-canvas-editor@0.2.0(mini-canvas-core@0.2.0):
+    resolution: {integrity: sha512-Pin5oOx9D5ftztcaxLMv/YOYUA13Bd3mWrjBiFhYU4KhbsQNET41biMdn/yYJKka6125tnPYlrXJzm2UXmCu/Q==}
     peerDependencies:
-      mini-canvas-core: ^0.1.1
+      mini-canvas-core: ^0.2.0
     dependencies:
-      mini-canvas-core: 0.1.1
+      mini-canvas-core: 0.2.0
     dev: false
 
   /minimatch@3.1.2:
