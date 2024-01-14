@@ -2,7 +2,7 @@
 
 # Mini Canvas Editor
 
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fimg-js%2Fmini-canvas-editor%2Fbadge%3Fref%3Dmain&style=flat-square)](https://actions-badge.atrox.dev/img-js/mini-canvas-editor/goto?ref=main) [![View this project on NPM](https://img.shields.io/npm/v/mini-canvas-editor.svg?style=flat-square)](https://npmjs.org/package/mini-canvas-editor)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fimg-js%2Fmini-canvas-editor%2Fbadge%3Fref%3Dmain&style=flat-square)](https://actions-badge.atrox.dev/img-js/mini-canvas-editor/goto?ref=main) [![License: MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)](/LICENSE) [![View this project on NPM](https://img.shields.io/npm/v/mini-canvas-editor.svg?style=flat-square)](https://npmjs.org/package/mini-canvas-editor)
 
 Canvas editor component for JavaScript application. Works with any front-end framework. Easy to integrate and use. Well-known graphical interface. Edit images, draw shapes, add texts and more. Gzipped size less than 100 KB. Uses Fabric.js internally.
 
@@ -55,9 +55,9 @@ Add the below code to your head section in HTML document.
 ```html
 <head>
 ...
-<link href="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.2.0/css/editor.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/mini-canvas-core@0.2.0/dist/index.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.2.0/dist/index.umd.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.3.0/css/editor.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mini-canvas-core@0.3.0/dist/index.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.3.0/dist/index.umd.js"></script>
 ```
 
 Create the editor by:
@@ -68,14 +68,4 @@ miniCanvasEditor.Editor.createBlank(placeholder, 200, 300, {});
 
 ## 💡 License
 
-Pick one license that fits your needs.
-
-| License          | Details |   |
-| ---------------- | -       | - |
-| 🍪 Hobby         | **1** application<br />**1** developer<br />1 year updates | [📦 Buy license](https://buy.stripe.com/14k8yq3p048L7fO4gj) |
-| 🍰 Standard      | **2** applications<br />**up to 4** developers<br />1 year updates | |
-| 🎂 Enterprise    | **unlimited** applications<br />**unlimited** developers<br />1 year updates | |
-
-The license is perpetual. By buying the license you get an access to the source code of the editor.
-
-See the [LICENSE](/LICENSE) file for more details.
+This project is released under the MIT license.

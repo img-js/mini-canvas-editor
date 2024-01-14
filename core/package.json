@@ -1,0 +1,98 @@
+{
+	"name": "mini-canvas-core",
+	"description": "Core library for Mini Canvas Editor.",
+	"version": "0.3.0",
+	"license": "SEE LICENSE IN LICENSE",
+	"type": "module",
+	"main": "./lib/cjs/index.browser.cjs",
+	"types": "./lib/index.browser.d.ts",
+	"exports": {
+		".": {
+			"types": {
+				"require": "./lib/index.browser.d.ts",
+				"default": "./lib/index.browser.d.ts"
+			},
+			"default": {
+				"require": "./lib/cjs/index.browser.cjs",
+				"default": "./lib/esm/index.browser.js"
+			}
+		},
+		"./node": {
+			"types": {
+				"require": "./lib/index.node.d.ts",
+				"default": "./lib/index.node.d.ts"
+			},
+			"default": {
+				"require": "./lib/cjs/index.node.cjs",
+				"default": "./lib/esm/index.node.js"
+			}
+		}
+	},
+	"typesVersions": {
+		"*": {
+			".": [
+				"./lib/index.browser.d.ts"
+			],
+			"node": [
+				"./lib/index.node.d.ts"
+			]
+		}
+	},
+	"sideEffects": false,
+	"files": [
+		"lib/",
+		"dist/"
+	],
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/b4rtaz/mini-canvas-editor.git"
+	},
+	"author": {
+		"name": "N4NO",
+		"url": "https://n4no.com/"
+	},
+	"homepage": "https://n4no.com/",
+	"scripts": {
+		"prepare": "cp ../LICENSE LICENSE",
+		"clean": "rm -rf lib && rm -rf node_modules/.cache/rollup-plugin-typescript2",
+		"build": "pnpm clean && rollup -c",
+		"start": "pnpm clean && rollup -c --watch",
+		"eslint": "eslint ./src --ext .ts",
+		"prettier": "prettier --check ./src",
+		"prettier:fix": "prettier --write ./src"
+	},
+	"dependencies": {
+		"fabric": "6.0.0-beta14"
+	},
+	"devDependencies": {
+		"tslib": "^2.6.2",
+		"typescript": "^5.2.2",
+		"rollup": "^4.1.4",
+		"rollup-plugin-dts": "^6.1.0",
+		"rollup-plugin-typescript2": "^0.36.0",
+		"@rollup/plugin-node-resolve": "^15.2.2",
+		"@rollup/plugin-terser": "^0.4.4",
+		"@rollup/plugin-replace": "^5.0.4",
+		"prettier": "^3.0.3",
+		"@typescript-eslint/eslint-plugin": "^6.7.5",
+		"@typescript-eslint/parser": "^6.7.5",
+		"eslint": "^8.51.0"
+	},
+	"keywords": [
+		"canvas",
+		"editor",
+		"image",
+		"image editor",
+		"photo editor",
+		"photo",
+		"javascript image editor",
+		"paint",
+		"js paint",
+		"image crop",
+		"image resize",
+		"inpainting"
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"outDir": "./build/",
+		"noImplicitAny": true,
+		"target": "es6",
+		"module": "es2015",
+		"sourceMap": false,
+		"strict": true,
+		"allowJs": false,
+		"declaration": true,
+		"declarationDir": "./build/",
+		"moduleResolution": "node",
+		"lib": [
+			"es2017",
+			"dom"
+		]
+	}
+}

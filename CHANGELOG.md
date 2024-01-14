@@ -1,3 +1,7 @@
+## 0.3.0
+
+This version changed the license to MIT.
+
 ## 0.2.0
 
 This version improves support for UMD bundles.

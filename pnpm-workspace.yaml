@@ -1,3 +1,5 @@
 packages:
+  - './core'
+  - './editor'
   - './demos/svelte-app'
   - './demos/webpack-app'
