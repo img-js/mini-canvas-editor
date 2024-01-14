@@ -1,0 +1,91 @@
+{
+	"name": "mini-canvas-editor",
+	"description": "Canvas editor component for JavaScript application. Easy to integrate and use.",
+	"version": "0.3.0",
+	"type": "module",
+	"main": "./lib/esm/index.js",
+	"types": "./lib/index.d.ts",
+	"exports": {
+		".": {
+			"types": {
+				"require": "./lib/index.d.ts",
+				"default": "./lib/index.d.ts"
+			},
+			"default": {
+				"require": "./lib/cjs/index.cjs",
+				"default": "./lib/esm/index.js"
+			}
+		},
+		"./css/editor.css": {
+			"default": "./css/editor.css"
+		}
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"files": [
+		"css/",
+		"lib/",
+		"dist/"
+	],
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/b4rtaz/mini-canvas-editor.git"
+	},
+	"author": {
+		"name": "N4NO",
+		"url": "https://n4no.com/"
+	},
+	"homepage": "https://n4no.com/",
+	"scripts": {
+		"prepare": "cp ../LICENSE LICENSE && cp ../README.md README.md",
+		"clean": "rm -rf lib && rm -rf build && rm -rf dist && rm -rf node_modules/.cache/rollup-plugin-typescript2",
+		"start": "rollup -c --watch",
+		"build": "pnpm clean && rollup -c",
+		"eslint": "eslint ./src --ext .ts",
+		"test": "karma start karma.conf.cjs",
+		"test:single": "karma start karma.conf.cjs --single-run",
+		"prettier": "prettier --check ./src",
+		"prettier:fix": "prettier --write ./src ./css"
+	},
+	"dependencies": {
+		"mini-canvas-core": "^0.3.0"
+	},
+	"peerDependencies": {
+		"mini-canvas-core": "^0.3.0"
+	},
+	"devDependencies": {
+		"tslib": "^2.6.2",
+		"rollup": "^4.1.4",
+		"rollup-plugin-dts": "^6.1.0",
+		"rollup-plugin-typescript2": "^0.36.0",
+		"@rollup/plugin-node-resolve": "^15.2.2",
+		"@rollup/plugin-terser": "^0.4.4",
+		"typescript": "^5.2.2",
+		"prettier": "^3.0.3",
+		"@typescript-eslint/eslint-plugin": "^6.7.5",
+		"@typescript-eslint/parser": "^6.7.5",
+		"eslint": "^8.51.0",
+		"karma": "^6.4.2",
+		"karma-chrome-launcher": "^3.2.0",
+		"karma-jasmine": "^5.1.0",
+		"karma-spec-reporter": "^0.0.36",
+		"karma-typescript": "^5.5.4",
+		"karma-typescript-es6-transform": "^5.5.4"
+	},
+	"keywords": [
+		"canvas",
+		"editor",
+		"image",
+		"image editor",
+		"photo editor",
+		"photo",
+		"javascript image editor",
+		"paint",
+		"js paint",
+		"image crop",
+		"image resize",
+		"inpainting"
+	]
+}

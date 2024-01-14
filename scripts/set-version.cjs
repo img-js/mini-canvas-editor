@@ -45,7 +45,7 @@ function updateJsdelivrUrl(filePath) {
 	filePath = resolvePath(filePath);
 	let text = fs.readFileSync(filePath, 'utf-8');
 
-	text = text.replace(/\/\/cdn\.jsdelivr\.net\/npm\/mini-canvas-editor@\d+\.\d+\.\d+/g, (found) => {
+	text = text.replace(/\/\/cdn\.jsdelivr\.net\/npm\/mini-canvas-(editor|core)@\d+\.\d+\.\d+/g, (found) => {
 		const parts = found.split('@');
 		return `${parts[0]}@${version}`;
 	});
