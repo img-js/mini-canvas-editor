@@ -29,7 +29,7 @@ importers:
         version: 0.4.4(rollup@4.1.4)
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.7.5
-        version: 6.7.5(@typescript-eslint/parser@6.7.5)(eslint@8.51.0)(typescript@5.2.2)
+        version: 6.7.5(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint@8.51.0)(typescript@5.2.2)
       '@typescript-eslint/parser':
         specifier: ^6.7.5
         version: 6.7.5(eslint@8.51.0)(typescript@5.2.2)
@@ -64,18 +64,18 @@ importers:
         specifier: 6.0.0-beta13
         version: 6.0.0-beta13
       mini-canvas-core:
-        specifier: ^0.3.0
+        specifier: workspace:*
         version: link:../../core
       mini-canvas-editor:
-        specifier: ^0.3.0
+        specifier: workspace:*
         version: link:../../editor
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^2.1.0
-        version: 2.1.0(@sveltejs/kit@1.26.0)
+        version: 2.1.0(@sveltejs/kit@1.26.0(svelte@4.0.5)(vite@4.4.2(@types/node@20.8.6)(terser@5.21.0)))
       '@sveltejs/kit':
         specifier: ^1.26.0
-        version: 1.26.0(svelte@4.0.5)(vite@4.4.2)
+        version: 1.26.0(svelte@4.0.5)(vite@4.4.2(@types/node@20.8.6)(terser@5.21.0))
       prettier:
         specifier: ^3.0.3
         version: 3.0.3
@@ -84,7 +84,7 @@ importers:
         version: 4.0.5
       svelte-check:
         specifier: ^3.4.3
-        version: 3.4.3(svelte@4.0.5)
+        version: 3.4.3(@babel/core@7.23.2)(postcss@8.4.31)(svelte@4.0.5)
       tslib:
         specifier: ^2.4.1
         version: 2.4.1
@@ -93,26 +93,26 @@ importers:
         version: 5.2.2
       vite:
         specifier: ^4.4.2
-        version: 4.4.2
+        version: 4.4.2(@types/node@20.8.6)(terser@5.21.0)
 
   demos/webpack-app:
     dependencies:
       mini-canvas-core:
         specifier: ^0.3.0
-        version: link:../../core
+        version: 0.3.0
       mini-canvas-editor:
         specifier: ^0.3.0
-        version: link:../../editor
+        version: 0.3.0(mini-canvas-core@0.3.0)
     devDependencies:
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.7.5
-        version: 6.7.5(@typescript-eslint/parser@6.7.5)(eslint@8.51.0)(typescript@5.2.2)
+        version: 6.7.5(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint@8.51.0)(typescript@5.2.2)
       '@typescript-eslint/parser':
         specifier: ^6.7.5
         version: 6.7.5(eslint@8.51.0)(typescript@5.2.2)
       css-loader:
         specifier: ^6.7.3
-        version: 6.7.3(webpack@5.89.0)
+        version: 6.7.3(webpack@5.89.0(webpack-cli@5.1.4))
       eslint:
         specifier: ^8.51.0
         version: 8.51.0
@@ -121,10 +121,10 @@ importers:
         version: 2.8.7
       style-loader:
         specifier: ^3.3.1
-        version: 3.3.1(webpack@5.89.0)
+        version: 3.3.1(webpack@5.89.0(webpack-cli@5.1.4))
       ts-loader:
         specifier: ^9.4.2
-        version: 9.4.2(typescript@5.2.2)(webpack@5.89.0)
+        version: 9.4.2(typescript@5.2.2)(webpack@5.89.0(webpack-cli@5.1.4))
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
@@ -138,7 +138,7 @@ importers:
   editor:
     dependencies:
       mini-canvas-core:
-        specifier: ^0.3.0
+        specifier: workspace:*
         version: link:../core
     devDependencies:
       '@rollup/plugin-node-resolve':
@@ -149,7 +149,7 @@ importers:
         version: 0.4.4(rollup@4.1.4)
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.7.5
-        version: 6.7.5(@typescript-eslint/parser@6.7.5)(eslint@8.51.0)(typescript@5.2.2)
+        version: 6.7.5(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint@8.51.0)(typescript@5.2.2)
       '@typescript-eslint/parser':
         specifier: ^6.7.5
         version: 6.7.5(eslint@8.51.0)(typescript@5.2.2)
@@ -2513,6 +2513,14 @@ packages:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
 
+  mini-canvas-core@0.3.0:
+    resolution: {integrity: sha512-1eh0YVSCpQqHDf4yeED0Y6ft8MFS6FGpAcIWrg1pioYYBX7NcEL9GFCY7hbw9Vdl3aTGYdG6ep5lR2IVm4Hj7g==}
+
+  mini-canvas-editor@0.3.0:
+    resolution: {integrity: sha512-7zO4k/rvKOgWmBjFY3m8050knl2NBie+xNoMVDaCure9bMH9UHs4ZqQ2+r4VT2Ll0MWT0FbG9XY/tUbJoabUCw==}
+    peerDependencies:
+      mini-canvas-core: ^0.3.0
+
   minimalistic-assert@1.0.1:
     resolution: {integrity: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==}
 
@@ -4433,20 +4441,23 @@ snapshots:
       is-builtin-module: 3.2.1
       is-module: 1.0.0
       resolve: 1.22.8
+    optionalDependencies:
       rollup: 4.1.4
 
   '@rollup/plugin-replace@5.0.4(rollup@4.1.4)':
     dependencies:
       '@rollup/pluginutils': 5.0.5(rollup@4.1.4)
       magic-string: 0.30.5
+    optionalDependencies:
       rollup: 4.1.4
 
   '@rollup/plugin-terser@0.4.4(rollup@4.1.4)':
     dependencies:
-      rollup: 4.1.4
       serialize-javascript: 6.0.1
       smob: 1.4.1
       terser: 5.21.0
+    optionalDependencies:
+      rollup: 4.1.4
 
   '@rollup/pluginutils@4.2.1':
     dependencies:
@@ -4458,6 +4469,7 @@ snapshots:
       '@types/estree': 1.0.2
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    optionalDependencies:
       rollup: 4.1.4
 
   '@rollup/rollup-android-arm-eabi@4.1.4':
@@ -4498,14 +4510,14 @@ snapshots:
 
   '@socket.io/component-emitter@3.1.0': {}
 
-  '@sveltejs/adapter-auto@2.1.0(@sveltejs/kit@1.26.0)':
+  '@sveltejs/adapter-auto@2.1.0(@sveltejs/kit@1.26.0(svelte@4.0.5)(vite@4.4.2(@types/node@20.8.6)(terser@5.21.0)))':
     dependencies:
-      '@sveltejs/kit': 1.26.0(svelte@4.0.5)(vite@4.4.2)
+      '@sveltejs/kit': 1.26.0(svelte@4.0.5)(vite@4.4.2(@types/node@20.8.6)(terser@5.21.0))
       import-meta-resolve: 3.0.0
 
-  '@sveltejs/kit@1.26.0(svelte@4.0.5)(vite@4.4.2)':
+  '@sveltejs/kit@1.26.0(svelte@4.0.5)(vite@4.4.2(@types/node@20.8.6)(terser@5.21.0))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 2.4.6(svelte@4.0.5)(vite@4.4.2)
+      '@sveltejs/vite-plugin-svelte': 2.4.6(svelte@4.0.5)(vite@4.4.2(@types/node@20.8.6)(terser@5.21.0))
       '@types/cookie': 0.5.2
       cookie: 0.5.0
       devalue: 4.3.2
@@ -4519,30 +4531,30 @@ snapshots:
       svelte: 4.0.5
       tiny-glob: 0.2.9
       undici: 5.26.4
-      vite: 4.4.2
+      vite: 4.4.2(@types/node@20.8.6)(terser@5.21.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@sveltejs/vite-plugin-svelte-inspector@1.0.4(@sveltejs/vite-plugin-svelte@2.4.6)(svelte@4.0.5)(vite@4.4.2)':
+  '@sveltejs/vite-plugin-svelte-inspector@1.0.4(@sveltejs/vite-plugin-svelte@2.4.6(svelte@4.0.5)(vite@4.4.2(@types/node@20.8.6)(terser@5.21.0)))(svelte@4.0.5)(vite@4.4.2(@types/node@20.8.6)(terser@5.21.0))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 2.4.6(svelte@4.0.5)(vite@4.4.2)
+      '@sveltejs/vite-plugin-svelte': 2.4.6(svelte@4.0.5)(vite@4.4.2(@types/node@20.8.6)(terser@5.21.0))
       debug: 4.3.4
       svelte: 4.0.5
-      vite: 4.4.2
+      vite: 4.4.2(@types/node@20.8.6)(terser@5.21.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@sveltejs/vite-plugin-svelte@2.4.6(svelte@4.0.5)(vite@4.4.2)':
+  '@sveltejs/vite-plugin-svelte@2.4.6(svelte@4.0.5)(vite@4.4.2(@types/node@20.8.6)(terser@5.21.0))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 1.0.4(@sveltejs/vite-plugin-svelte@2.4.6)(svelte@4.0.5)(vite@4.4.2)
+      '@sveltejs/vite-plugin-svelte-inspector': 1.0.4(@sveltejs/vite-plugin-svelte@2.4.6(svelte@4.0.5)(vite@4.4.2(@types/node@20.8.6)(terser@5.21.0)))(svelte@4.0.5)(vite@4.4.2(@types/node@20.8.6)(terser@5.21.0))
       debug: 4.3.4
       deepmerge: 4.3.1
       kleur: 4.1.5
       magic-string: 0.30.5
       svelte: 4.0.5
       svelte-hmr: 0.15.3(svelte@4.0.5)
-      vite: 4.4.2
-      vitefu: 0.2.5(vite@4.4.2)
+      vite: 4.4.2(@types/node@20.8.6)(terser@5.21.0)
+      vitefu: 0.2.5(vite@4.4.2(@types/node@20.8.6)(terser@5.21.0))
     transitivePeerDependencies:
       - supports-color
 
@@ -4581,7 +4593,7 @@ snapshots:
 
   '@types/semver@7.5.3': {}
 
-  '@typescript-eslint/eslint-plugin@6.7.5(@typescript-eslint/parser@6.7.5)(eslint@8.51.0)(typescript@5.2.2)':
+  '@typescript-eslint/eslint-plugin@6.7.5(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint@8.51.0)(typescript@5.2.2)':
     dependencies:
       '@eslint-community/regexpp': 4.9.1
       '@typescript-eslint/parser': 6.7.5(eslint@8.51.0)(typescript@5.2.2)
@@ -4596,6 +4608,7 @@ snapshots:
       natural-compare: 1.4.0
       semver: 7.5.4
       ts-api-utils: 1.0.3(typescript@5.2.2)
+    optionalDependencies:
       typescript: 5.2.2
     transitivePeerDependencies:
       - supports-color
@@ -4608,6 +4621,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 6.7.5
       debug: 4.3.4
       eslint: 8.51.0
+    optionalDependencies:
       typescript: 5.2.2
     transitivePeerDependencies:
       - supports-color
@@ -4624,6 +4638,7 @@ snapshots:
       debug: 4.3.4
       eslint: 8.51.0
       ts-api-utils: 1.0.3(typescript@5.2.2)
+    optionalDependencies:
       typescript: 5.2.2
     transitivePeerDependencies:
       - supports-color
@@ -4639,6 +4654,7 @@ snapshots:
       is-glob: 4.0.3
       semver: 7.5.4
       ts-api-utils: 1.0.3(typescript@5.2.2)
+    optionalDependencies:
       typescript: 5.2.2
     transitivePeerDependencies:
       - supports-color
@@ -4738,17 +4754,17 @@ snapshots:
       '@webassemblyjs/ast': 1.11.6
       '@xtuc/long': 4.2.2
 
-  '@webpack-cli/configtest@2.1.1(webpack-cli@5.1.4)(webpack@5.89.0)':
+  '@webpack-cli/configtest@2.1.1(webpack-cli@5.1.4(webpack@5.89.0))(webpack@5.89.0(webpack-cli@5.1.4))':
     dependencies:
       webpack: 5.89.0(webpack-cli@5.1.4)
       webpack-cli: 5.1.4(webpack@5.89.0)
 
-  '@webpack-cli/info@2.0.2(webpack-cli@5.1.4)(webpack@5.89.0)':
+  '@webpack-cli/info@2.0.2(webpack-cli@5.1.4(webpack@5.89.0))(webpack@5.89.0(webpack-cli@5.1.4))':
     dependencies:
       webpack: 5.89.0(webpack-cli@5.1.4)
       webpack-cli: 5.1.4(webpack@5.89.0)
 
-  '@webpack-cli/serve@2.0.5(webpack-cli@5.1.4)(webpack@5.89.0)':
+  '@webpack-cli/serve@2.0.5(webpack-cli@5.1.4(webpack@5.89.0))(webpack@5.89.0(webpack-cli@5.1.4))':
     dependencies:
       webpack: 5.89.0(webpack-cli@5.1.4)
       webpack-cli: 5.1.4(webpack@5.89.0)
@@ -5191,7 +5207,7 @@ snapshots:
       randombytes: 2.1.0
       randomfill: 1.0.4
 
-  css-loader@6.7.3(webpack@5.89.0):
+  css-loader@6.7.3(webpack@5.89.0(webpack-cli@5.1.4)):
     dependencies:
       icss-utils: 5.1.0(postcss@8.4.31)
       postcss: 8.4.31
@@ -5958,7 +5974,6 @@ snapshots:
       abab: 2.0.6
       acorn: 8.10.0
       acorn-globals: 7.0.1
-      canvas: 2.11.2
       cssom: 0.5.0
       cssstyle: 2.3.0
       data-urls: 3.0.2
@@ -5982,6 +5997,8 @@ snapshots:
       whatwg-url: 11.0.0
       ws: 8.14.2
       xml-name-validator: 4.0.0
+    optionalDependencies:
+      canvas: 2.11.2
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -6229,6 +6246,19 @@ snapshots:
   mimic-response@2.1.0: {}
 
   min-indent@1.0.1: {}
+
+  mini-canvas-core@0.3.0:
+    dependencies:
+      fabric: 6.0.0-beta14
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
+
+  mini-canvas-editor@0.3.0(mini-canvas-core@0.3.0):
+    dependencies:
+      mini-canvas-core: 0.3.0
 
   minimalistic-assert@1.0.1: {}
 
@@ -6819,7 +6849,7 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  style-loader@3.3.1(webpack@5.89.0):
+  style-loader@3.3.1(webpack@5.89.0(webpack-cli@5.1.4)):
     dependencies:
       webpack: 5.89.0(webpack-cli@5.1.4)
 
@@ -6837,7 +6867,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-check@3.4.3(svelte@4.0.5):
+  svelte-check@3.4.3(@babel/core@7.23.2)(postcss@8.4.31)(svelte@4.0.5):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.19
       chokidar: 3.5.3
@@ -6846,7 +6876,7 @@ snapshots:
       picocolors: 1.0.0
       sade: 1.8.1
       svelte: 4.0.5
-      svelte-preprocess: 5.0.4(svelte@4.0.5)(typescript@5.2.2)
+      svelte-preprocess: 5.0.4(@babel/core@7.23.2)(postcss@8.4.31)(svelte@4.0.5)(typescript@5.2.2)
       typescript: 5.2.2
     transitivePeerDependencies:
       - '@babel/core'
@@ -6863,7 +6893,7 @@ snapshots:
     dependencies:
       svelte: 4.0.5
 
-  svelte-preprocess@5.0.4(svelte@4.0.5)(typescript@5.2.2):
+  svelte-preprocess@5.0.4(@babel/core@7.23.2)(postcss@8.4.31)(svelte@4.0.5)(typescript@5.2.2):
     dependencies:
       '@types/pug': 2.0.7
       detect-indent: 6.1.0
@@ -6871,6 +6901,9 @@ snapshots:
       sorcery: 0.11.0
       strip-indent: 3.0.0
       svelte: 4.0.5
+    optionalDependencies:
+      '@babel/core': 7.23.2
+      postcss: 8.4.31
       typescript: 5.2.2
 
   svelte@4.0.5:
@@ -6903,7 +6936,7 @@ snapshots:
       mkdirp: 1.0.4
       yallist: 4.0.0
 
-  terser-webpack-plugin@5.3.9(webpack@5.89.0):
+  terser-webpack-plugin@5.3.9(webpack@5.89.0(webpack-cli@5.1.4)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.19
       jest-worker: 27.5.1
@@ -6963,7 +6996,7 @@ snapshots:
     dependencies:
       typescript: 5.2.2
 
-  ts-loader@9.4.2(typescript@5.2.2)(webpack@5.89.0):
+  ts-loader@9.4.2(typescript@5.2.2)(webpack@5.89.0(webpack-cli@5.1.4)):
     dependencies:
       chalk: 4.1.2
       enhanced-resolve: 5.15.0
@@ -7060,17 +7093,19 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite@4.4.2:
+  vite@4.4.2(@types/node@20.8.6)(terser@5.21.0):
     dependencies:
       esbuild: 0.18.20
       postcss: 8.4.31
       rollup: 3.29.4
     optionalDependencies:
+      '@types/node': 20.8.6
       fsevents: 2.3.3
+      terser: 5.21.0
 
-  vitefu@0.2.5(vite@4.4.2):
-    dependencies:
-      vite: 4.4.2
+  vitefu@0.2.5(vite@4.4.2(@types/node@20.8.6)(terser@5.21.0)):
+    optionalDependencies:
+      vite: 4.4.2(@types/node@20.8.6)(terser@5.21.0)
 
   vm-browserify@1.1.2: {}
 
@@ -7098,9 +7133,9 @@ snapshots:
   webpack-cli@5.1.4(webpack@5.89.0):
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
-      '@webpack-cli/configtest': 2.1.1(webpack-cli@5.1.4)(webpack@5.89.0)
-      '@webpack-cli/info': 2.0.2(webpack-cli@5.1.4)(webpack@5.89.0)
-      '@webpack-cli/serve': 2.0.5(webpack-cli@5.1.4)(webpack@5.89.0)
+      '@webpack-cli/configtest': 2.1.1(webpack-cli@5.1.4(webpack@5.89.0))(webpack@5.89.0(webpack-cli@5.1.4))
+      '@webpack-cli/info': 2.0.2(webpack-cli@5.1.4(webpack@5.89.0))(webpack@5.89.0(webpack-cli@5.1.4))
+      '@webpack-cli/serve': 2.0.5(webpack-cli@5.1.4(webpack@5.89.0))(webpack@5.89.0(webpack-cli@5.1.4))
       colorette: 2.0.20
       commander: 10.0.1
       cross-spawn: 7.0.3
@@ -7142,10 +7177,11 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.9(webpack@5.89.0)
+      terser-webpack-plugin: 5.3.9(webpack@5.89.0(webpack-cli@5.1.4))
       watchpack: 2.4.0
-      webpack-cli: 5.1.4(webpack@5.89.0)
       webpack-sources: 3.2.3
+    optionalDependencies:
+      webpack-cli: 5.1.4(webpack@5.89.0)
     transitivePeerDependencies:
       - '@swc/core'
       - esbuild
