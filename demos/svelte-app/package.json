@@ -14,8 +14,8 @@
 		"prettier:fix": "prettier --write ./src"
 	},
 	"dependencies": {
-		"mini-canvas-editor": "workspace:*",
-		"mini-canvas-core": "workspace:*",
+		"mini-canvas-editor": "*",
+		"mini-canvas-core": "*",
 		"fabric": "6.0.0-beta13",
 		"canvas": "^2.11.2"
 	},

@@ -10,6 +10,7 @@
 		"serve": "http-server -c-1 -p 4333 ./"
 	},
 	"devDependencies": {
-		"http-server": "^14.1.1"
+		"http-server": "^14.1.1",
+		"ts-loader": "^9.5.1"
 	}
 }
