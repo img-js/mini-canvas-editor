@@ -1,6 +1,7 @@
 import { MceImage, MceRect, MceTextbox } from '../shapes';
 import { fitImage } from './fit-image';
 import { stretchImage } from './stretch-image';
+import { fillImage } from './fill-image';
 import { MceStaticCanvas } from '../mce-static-canvas';
 import { Object as FabricObject } from 'fabric';
 import { loadImage } from './load-image';
@@ -53,6 +54,9 @@ export class MceCanvasReplacer {
 				break;
 			case 'fit':
 				image = fitImage(rect, sourceImage);
+				break;
+			case 'fill':
+				image = fillImage(rect, sourceImage);
 				break;
 			default:
 				throw new Error(`Unknown mode: ${mode}`);
