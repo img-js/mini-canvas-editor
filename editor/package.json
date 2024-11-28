@@ -50,7 +50,7 @@
 		"prettier:fix": "prettier --write ./src ./css"
 	},
 	"dependencies": {
-		"mini-canvas-core": "*"
+		"mini-canvas-core": "workspace:*"
 	},
 	"peerDependencies": {
 		"mini-canvas-core": "^0.3.0"
