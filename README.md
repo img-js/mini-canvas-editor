@@ -55,9 +55,9 @@ Add the below code to your head section in HTML document.
 ```html
 <head>
 ...
-<link href="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.3.0/css/editor.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/mini-canvas-core@0.3.0/dist/index.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.3.0/dist/index.umd.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.3.1/css/editor.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mini-canvas-core@0.3.1/dist/index.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mini-canvas-editor@0.3.1/dist/index.umd.js"></script>
 ```
 
 Create the editor by:

@@ -138,8 +138,8 @@ importers:
   editor:
     dependencies:
       mini-canvas-core:
-        specifier: workspace:*
-        version: link:../core
+        specifier: ^0.3.1
+        version: 0.3.1
     devDependencies:
       '@rollup/plugin-node-resolve':
         specifier: ^15.2.2
@@ -2512,6 +2512,9 @@ packages:
   min-indent@1.0.1:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
+
+  mini-canvas-core@0.3.1:
+    resolution: {integrity: sha512-qXWZ/axctBE1jT2k4xiuVqVJYNZ65CEzC5S1xO5LUbtJyFH90ugniFYush9tA44NN1ydpsil+i7YXe8qb13jKA==}
 
   minimalistic-assert@1.0.1:
     resolution: {integrity: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==}
@@ -6238,6 +6241,15 @@ snapshots:
   mimic-response@2.1.0: {}
 
   min-indent@1.0.1: {}
+
+  mini-canvas-core@0.3.1:
+    dependencies:
+      fabric: 6.0.0-beta14
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
 
   minimalistic-assert@1.0.1: {}
 

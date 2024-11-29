@@ -1,7 +1,7 @@
 {
 	"name": "mini-canvas-editor",
 	"description": "Canvas editor component for JavaScript application. Easy to integrate and use.",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"type": "module",
 	"main": "./lib/esm/index.js",
 	"types": "./lib/index.d.ts",
@@ -50,10 +50,10 @@
 		"prettier:fix": "prettier --write ./src ./css"
 	},
 	"dependencies": {
-		"mini-canvas-core": "workspace:*"
+		"mini-canvas-core": "^0.3.1"
 	},
 	"peerDependencies": {
-		"mini-canvas-core": "^0.3.0"
+		"mini-canvas-core": "^0.3.1"
 	},
 	"devDependencies": {
 		"tslib": "^2.6.2",
