@@ -98,11 +98,11 @@ importers:
   demos/webpack-app:
     dependencies:
       mini-canvas-core:
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: workspace:*
+        version: link:../../core
       mini-canvas-editor:
-        specifier: ^0.3.0
-        version: 0.3.0(mini-canvas-core@0.3.0)
+        specifier: workspace:*
+        version: link:../../editor
     devDependencies:
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.7.5
@@ -2512,14 +2512,6 @@ packages:
   min-indent@1.0.1:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
-
-  mini-canvas-core@0.3.0:
-    resolution: {integrity: sha512-1eh0YVSCpQqHDf4yeED0Y6ft8MFS6FGpAcIWrg1pioYYBX7NcEL9GFCY7hbw9Vdl3aTGYdG6ep5lR2IVm4Hj7g==}
-
-  mini-canvas-editor@0.3.0:
-    resolution: {integrity: sha512-7zO4k/rvKOgWmBjFY3m8050knl2NBie+xNoMVDaCure9bMH9UHs4ZqQ2+r4VT2Ll0MWT0FbG9XY/tUbJoabUCw==}
-    peerDependencies:
-      mini-canvas-core: ^0.3.0
 
   minimalistic-assert@1.0.1:
     resolution: {integrity: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==}
@@ -6246,19 +6238,6 @@ snapshots:
   mimic-response@2.1.0: {}
 
   min-indent@1.0.1: {}
-
-  mini-canvas-core@0.3.0:
-    dependencies:
-      fabric: 6.0.0-beta14
-    transitivePeerDependencies:
-      - bufferutil
-      - encoding
-      - supports-color
-      - utf-8-validate
-
-  mini-canvas-editor@0.3.0(mini-canvas-core@0.3.0):
-    dependencies:
-      mini-canvas-core: 0.3.0
 
   minimalistic-assert@1.0.1: {}
 
