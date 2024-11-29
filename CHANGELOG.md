@@ -1,6 +1,6 @@
 ## 0.3.1
 
-Added a new fill mode to the replaceRectToImage method in the MceCanvasReplacer class (credit: [@seven7seven](https://github.com/seven7seven)).
+Added a new fill mode to the `replaceRectToImage` method in the `MceCanvasReplacer` class (credit: [@seven7seven](https://github.com/seven7seven)).
 
 ## 0.3.0
 
