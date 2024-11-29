@@ -1,7 +1,7 @@
 {
 	"name": "mini-canvas-core",
 	"description": "Core library for Mini Canvas Editor.",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"license": "SEE LICENSE IN LICENSE",
 	"type": "module",
 	"main": "./lib/cjs/index.browser.cjs",

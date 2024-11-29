@@ -37,7 +37,11 @@ export class MceCanvasReplacer {
 	 * @param mode Mode of fitting image to the rectangle.
 	 * @returns Promise that resolves when the rect is replaced.
 	 */
-	public async replaceRectToImage(layer: MceLayer, sourceImage: HTMLImageElement | string, mode: 'stretch' | 'fit' | 'fill'): Promise<void> {
+	public async replaceRectToImage(
+		layer: MceLayer,
+		sourceImage: HTMLImageElement | string,
+		mode: 'stretch' | 'fit' | 'fill'
+	): Promise<void> {
 		const rect = this.objects[layer.realIndex] as MceRect;
 		if (!rect.visible) {
 			// If the layer is hidden, do nothing.
